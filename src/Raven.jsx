@@ -19,11 +19,18 @@ export default class Raven extends React.Component {
     this.uninstall();
   }
 
-  connect() {
+  install() {
     if (!this.isComponentMounted) {
       return;
     }
     RavenJS.config(this.props.dsn).install();
+  }
+
+  uninstall() {
+    if (!Raven._isRavenInstalled) {
+      return;
+    }
+    RavenJS.uninstall();
   }
 
   render() {
