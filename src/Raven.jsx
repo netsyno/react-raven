@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import RavenJS from 'raven-js';
 import debounce from 'lodash/debounce';
 
-if (typeof navigator != 'undefined' && navigator.product == 'ReactNative') {
-  require('raven-js/plugins/react-native')(Raven);
+if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
+  require('raven-js/plugins/react-native')(RavenJS);
 }
 
 export default class Raven extends React.Component {
@@ -20,21 +20,16 @@ export default class Raven extends React.Component {
 
   componentWillUnmount() {
     this.isComponentMounted = false;
-    this.uninstall();
+    if (RavenJS._isRavenInstalled) {
+      RavenJS.uninstall();
+    }
   }
 
   install() {
-    if (!this.isComponentMounted) {
+    if (!this.isComponentMounted || RavenJS._isRavenInstalled) {
       return;
     }
     RavenJS.config(this.props.dsn, this.props.config).install();
-  }
-
-  uninstall() {
-    if (!Raven._isRavenInstalled) {
-      return;
-    }
-    RavenJS.uninstall();
   }
 
   render() {
