@@ -2,9 +2,10 @@
   "name": "react-raven",
   "version": "1.0.0",
   "description": "A simple React component for Sentry integration.",
-  "main": "index.js",
+  "main": "dist/Raven.js",
   "scripts": {
-    "test": "jest"
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,24 @@
   "bugs": {
     "url": "https://github.com/khakulov/react-raven/issues"
   },
-  "homepage": "https://github.com/khakulov/react-raven#readme"
+  "homepage": "https://github.com/khakulov/react-raven#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  },
+  "peerDependencies": {
+    "prop-types": ">15.5.0",
+    "raven-js": "^3.14.2",
+    "react": ">15.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
