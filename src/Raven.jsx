@@ -27,7 +27,7 @@ class Raven extends React.Component {
   }
 
   render() {
-    return <div />;
+    return null;
   }
 }
 
