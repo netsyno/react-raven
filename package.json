@@ -1,0 +1,27 @@
+{
+  "name": "react-raven",
+  "version": "1.0.0",
+  "description": "A simple React component for Sentry integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khakulov/react-raven.git"
+  },
+  "keywords": [
+    "react",
+    "raven",
+    "reactjs",
+    "ravenjs",
+    "sentry",
+    "getsentry"
+  ],
+  "author": "Azim Khakulov <azim@khakulov.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/khakulov/react-raven/issues"
+  },
+  "homepage": "https://github.com/khakulov/react-raven#readme"
+}
