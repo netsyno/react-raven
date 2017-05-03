@@ -43,5 +43,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.4"
-  }
+  },
+  "files": [
+    "README.md",
+    "LICENCSE",
+    "dist"
+  ]
 }
