@@ -27,7 +27,7 @@ export default class Raven extends React.Component {
     if (!this.isComponentMounted) {
       return;
     }
-    RavenJS.config(this.props.dsn).install();
+    RavenJS.config(this.props.dsn, this.props.config).install();
   }
 
   uninstall() {
@@ -42,6 +42,11 @@ export default class Raven extends React.Component {
   }
 }
 
+Raven.defaultProps = {
+  config: {},
+};
+
 Raven.propTypes = {
   dsn: PropTypes.string.isRequired,
+  config: PropTypes.object,
 };
