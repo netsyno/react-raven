@@ -3,8 +3,11 @@
   "version": "1.0.2",
   "description": "A simple React component for Sentry integration.",
   "main": "dist/Raven.js",
+  "module": "es/Raven.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir dist",
+    "build": "npm run build:commonjs && npm run build:es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs NODE_ENV=production babel src --out-dir dist",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=production babel src --out-dir es",
     "lint": "eslint src"
   },
   "repository": {
@@ -47,6 +50,7 @@
   "files": [
     "README.md",
     "LICENCSE",
-    "dist"
+    "dist",
+    "es"
   ]
 }

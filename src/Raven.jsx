@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RavenJS from 'raven-js';
 import debounce from 'lodash/debounce';
 
-class Raven extends React.Component {
+export default class Raven extends React.Component {
   constructor(props) {
     super(props);
     this.install = debounce(this.install.bind(this));

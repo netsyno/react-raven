@@ -1,11 +1,27 @@
 {
+  "env": {
+    "commonjs": {
+      "presets": [
+        ["env", {
+          "targets": {
+              "browsers": ["last 1 versions", "ie >= 10"]
+          },
+          "modules": "commonjs",
+          "loose": true,
+          "useBuiltIns": true
+        }]
+      ]
+    }
+  },
   "presets": [
     ["env", {
       "targets": {
           "browsers": ["last 1 versions", "ie >= 10"]
       },
-      "modules": "commonjs",
+      "modules": false,
       "loose": true,
       "useBuiltIns": true
-    }], "react"]
+    }],
+    "react"
+  ]
 }
