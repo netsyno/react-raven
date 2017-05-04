@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import RavenJS from 'raven-js';
 import debounce from 'lodash/debounce';
 
-if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
-  require('raven-js/plugins/react-native')(RavenJS);
-}
-
 export default class Raven extends React.Component {
   constructor(props) {
     super(props);
