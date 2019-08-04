@@ -1,4 +1,5 @@
 # react-raven
+
 A simple React component for Sentry integration.
 
 ### Installing
@@ -11,15 +12,14 @@ npm install --save react-raven
 
 ```js
   import React from 'react';
-  import Raven from 'react-raven';
+  import useRaven from 'react-raven';
 
   fuction Application(props) {
+    const dsn = 'https://<key>@sentry.io/<project>';
+    useRaven(dsn)
     return (
       <div>
-        <Raven dsn="https://<key>@sentry.io/<project>" />
-
-        {'...your staff...'}
-
+        {'...your components...'}
       </div>
     );
   }

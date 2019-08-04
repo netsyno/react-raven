@@ -2,26 +2,32 @@
   "env": {
     "commonjs": {
       "presets": [
-        ["env", {
-          "targets": {
-              "browsers": ["last 1 versions", "ie >= 10"]
-          },
-          "modules": "commonjs",
-          "loose": true,
-          "useBuiltIns": true
-        }]
+        [
+          "env",
+          {
+            "targets": {
+              "browsers": ["last 3 versions", "ie >= 11"]
+            },
+            "modules": "commonjs",
+            "loose": true,
+            "useBuiltIns": true
+          }
+        ]
       ]
     }
   },
   "presets": [
-    ["env", {
-      "targets": {
-          "browsers": ["last 1 versions", "ie >= 10"]
-      },
-      "modules": false,
-      "loose": true,
-      "useBuiltIns": true
-    }],
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 3 versions", "ie >= 11"]
+        },
+        "modules": false,
+        "loose": true,
+        "useBuiltIns": true
+      }
+    ],
     "react"
   ]
 }
